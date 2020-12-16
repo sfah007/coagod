@@ -1,0 +1,28 @@
+{
+    "name": "Covid Bot",
+    "description": "A telegram bot which gives covid statistics of a country",
+    "keywords": [
+        "covid",
+        "Bot",
+        "Telegram bot"
+    ],
+    "logo": "https://telegra.ph/file/148a31a03bc243a4c93d9.png",
+    "repository": "https://github.com/Nimeshchandhra1/Covidstatsbot",
+    "success_url": "/",
+    "env": {
+        "BOT_TOKEN": {
+            "description": "your Telegram Bot Token, from @BotFather"
+        },
+        "START_MESSAGE": {
+            "description": "START MESSAGE FOR YOUR BOT.",
+            "required": true
+  }
+    },
+    "formation": {
+        "web": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "image": "heroku/php"
+}
