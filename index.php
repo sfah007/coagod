@@ -34,7 +34,6 @@ function bot($method,$datas=[]){
 //==============NC======================//
 $update = json_decode(file_get_contents('php://input'));
 $message = $update->message;
-$nc = Bot By NC;
 $message_id = $update->message->id;
 $chat_id = $message->chat->id;
 $name = $from_id = $message->from->first_name;
@@ -78,19 +77,16 @@ bot('sendmessage', [
 
 🌐COUNTRY :*** $ab
 
-$nc
 
 ***⭕ TOTAL CASES :*** $cd
 
 ***⭕ TOTAL DEATHS:*** ​$deth
 
-$nc
 
 ***🔵 TODAY'S CASES :*** $ef
 
 ***🔵 TODAY'S DEATHS :*** $gh
 
-$nc
 
 ***😀 RECOVERED :***  $kl
 
@@ -103,5 +99,6 @@ $nc
    'parse_mode'=>"MarkDown",
 ]);
    
+ }
 }
-}
+?>
