@@ -45,6 +45,7 @@ $chatid = $update->callback_query->message->chat->id;
 $msg = isset($update->message->text)?$update->message->text:'';
 $START_MESSAGE = $_ENV['START_MESSAGE'];
 $HELP_MENU = $_ENV['HELP_MENU'];
+//////Style of Benchamxd/////
 if($text == '/start')
 bot('sendmessage', [
                 'chat_id' =>$chat_id,
