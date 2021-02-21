@@ -45,17 +45,9 @@ $chatid = $update->callback_query->message->chat->id;
 $msg = isset($update->message->text)?$update->message->text:'';
 $START_MESSAGE = $_ENV['START_MESSAGE'];
 $HELP_MENU = $_ENV['HELP_MENU'];
-//////Style of Benchamxd/////
-if($text == '/start')
-bot('sendmessage', [
-                'chat_id' =>$chat_id,
-                'text' =>"***$START_MESSAGE***",
-'parse_mode'=>"MarkDown",
-]);
-if(strpos($text,"/stats") !== false){ 
-$bic = trim(str_replace("/stats","",$text));
 
-$get = json_decode(file_get_contents("https://coronavirus-19-api.herokuapp.com/countries/$bic"),true);
+
+$get = json_decode(file_get_contents("https://coronavirus-19-api.herokuapp.com/countries/iraq"),true);
 $ab = $get['country'];
 $cd = $get['cases'];
 $ef = $get['todayCases'];
@@ -69,10 +61,13 @@ $joke = $get['deathsPerOneMillion'];
 $jokee = $get['testsPerOneMillion'];
 $jo = $get['totalTests'];
 
-if($get['cases']){
+
+//////Style of Benchamxd/////
+if($text == '/start')
 bot('sendmessage', [
                 'chat_id' =>$chat_id,
-                'text'=>"***🔥🌀 CORONAVIRUS STATS 🌀🔥
+                'text' =>"***$START_MESSAGE***
+                ***🔥🌀 CORONAVIRUS STATS 🌀🔥
 
 
 
@@ -97,9 +92,9 @@ bot('sendmessage', [
 
 *Your Command* : $text
 *Bot By Nimesh chandhra*",
-   'parse_mode'=>"MarkDown",
+'parse_mode'=>"MarkDown",
 ]);
-   
+
  }
 }
 ?>
