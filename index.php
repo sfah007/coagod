@@ -95,5 +95,5 @@ bot('sendmessage', [
 'parse_mode'=>"MarkDown",
 ]);
 
-}
+
 ?>
